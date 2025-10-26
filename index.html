@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAKTI & About me — Interaktif</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts untuk teks (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="scrift.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <div class="brand">
+          <span class="dot"></span> <span id="brandText">SAKTI</span>
+        </div>
+
+        <div class="switch" role="tablist" aria-label="Pilih tampilan">
+          <button
+            class="active"
+            role="tab"
+            aria-selected="true"
+            data-view="sakti"
+          >
+            SAKTI
+          </button>
+          <button role="tab" aria-selected="false" data-view="Tentangsaya">
+            Tentang saya
+          </button>
+          <!-- tombol baru -->
+          <button role="tab" aria-selected="false" data-view="riwayat">
+            Riwayat
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- === VIEW: SAKTI === -->
+      <section id="view-sakti" class="view active" aria-labelledby="tab-sakti">
+        <div class="sakti-wrap">
+          <aside class="card">
+            <div class="muted" style="margin-bottom: 8px">Nilai SAKTI</div>
+            <div class="sakti-menu">
+              <button class="active" data-sakti="solid">
+                Solid (Solidaritas)
+              </button>
+              <button data-sakti="aktif">Aktif</button>
+              <button data-sakti="kreatif">Kreatif</button>
+              <button data-sakti="transformatif">Transformatif</button>
+              <button data-sakti="islamic">Islamic</button>
+            </div>
+          </aside>
+
+          <section class="sakti-content">
+            <div class="card" id="sakti-content-card">
+              <div class="badge">
+                SAKTI • <span id="label-sakti">Solid</span>
+              </div>
+              <h2 class="grad" id="title-sakti" style="margin-top: 6px">
+                Solid — Solidaritas
+              </h2>
+              <p id="desc-sakti" class="muted" style="margin: 6px 0 0">
+                rasa kebersamaan, kesetiakawanan, dan saling percaya
+                antaranggota dalam suatu kelompok atau komunitas yang membuat
+                mereka saling membantu,peduli, dan bertanggung jawab satu sama
+                lain.
+              </p>
+              <ul id="list-sakti" style="margin: 10px 0 0 18px">
+                <li>Merangkul tanpa membedakan.</li>
+                <li>Selalu saling bantu.</li>
+                <li>Berkerja sama dalam kebaikan.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- === VIEW: RIWAYAT === -->
+      <section id="view-riwayat" class="view" aria-labelledby="tab-riwayat">
+        <div class="riwayat-wrap">
+          <aside class="card">
+            <div class="muted" style="margin-bottom: 8px">Data Terkelompok</div>
+            <div class="riwayat-menu">
+              <button class="active" data-riwayat="sekolah">
+                Riwayat Sekolah
+              </button>
+              <button data-riwayat="prestasi">Prestasi</button>
+              <button data-riwayat="pengalaman">Pengalaman</button>
+            </div>
+          </aside>
+
+          <section class="riwayat-content">
+            <div class="card" id="riwayat-card">
+              <div class="badge">
+                RIWAYAT • <span id="label-riwayat">Sekolah</span>
+              </div>
+              <h2 class="grad" id="title-riwayat" style="margin-top: 6px">
+                Riwayat Sekolah
+              </h2>
+              <!-- daftar item akan dirender oleh JS -->
+              <div
+                id="list-riwayat"
+                style="display: grid; gap: 10px; margin-top: 8px"
+              ></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- === VIEW: Tentang Saya === -->
+      <section
+        id="view-Tentang saya"
+        class="view"
+        aria-labelledby="tab-Tentang saya"
+      >
+        <div class="TentangSaya-grid">
+          <!-- Sidebar: Biodata + Foto -->
+          <aside class="card">
+            <div class="photo">
+              <img
+                id="foto"
+                src="d:\web-monitor\assets\image.src.jpeg"
+                alt="Foto Profil"
+                onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#1f254a,#0d1b2a)'; this.parentElement.innerHTML='<div class=&quot;meta&quot; style=&quot;font-size:12px;text-align:center;padding:8px&quot;>Letakkan file <b>foto.jpg</b> di folder yang sama</div>';"
+              />
+            </div>
+
+            <h1>Naufal Syafiq Nurramdan Supriadi</h1>
+            <div class="meta" style="margin: 4px 0 10px">
+              Mahasiswa Teknik Informatika
+            </div>
+
+            <!-- Biodata inti -->
+            <div style="display: grid; gap: 6px">
+              <span class="meta">Tempat, Tanggal Lahir</span
+              ><span>Cianjur, 14 Oktober 2006</span>
+              <span class="meta">Alamat</span
+              ><span>Jln.Gang haji tohir Rt 1 Rw 1</span>
+              <span class="meta">Email</span
+              ><a href="mailto:naufal4076@gmail.com">naufal4076@gmail.com</a>
+              <span class="meta">Telepon</span><span>0855-2091-1541</span>
+            </div>
+          </aside>
+
+          <!-- Konten tunggal: Tentang Saya -->
+          <section
+            class="card"
+            id="Tentang saya-about"
+            style="display: grid; gap: 12px"
+          >
+            <h2 class="grad">Tentang Saya</h2>
+            <p class="muted">
+              Saya Naufal Syafiq Nurramdan Supriadi, mahasiswa Teknik
+              Informatika di UIN Sunan Gunung Djati Bandung. Saya memiliki minat
+              besar di bidang pengembangan dan desain game, mulai dari penulisan
+              kode hingga perancangan alur cerita dan karakter. Selain
+              akademik,saya aktif dalam olahraga Taekwondo dan telah mengikuti
+              berbagai kejuaraan tingkat daerah hingga nasional. Saya
+              berkomitmen untuk terus mengasah kemampuan agar dapat menciptakan
+              karya teknologi yang inovatif, fungsional, dan
+              menyenangkan bagi pengguna.
+            </p>
+          </section>
+        </div>
+
+        <div class="footer"></div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
