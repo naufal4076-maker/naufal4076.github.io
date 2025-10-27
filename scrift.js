@@ -219,3 +219,4 @@ window.addEventListener("load", () => {
   }
   setView("sakti");
 });
+
