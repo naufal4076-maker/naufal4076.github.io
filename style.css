@@ -349,3 +349,9 @@ pre {
 .stat {
   font-variant-numeric: tabular-nums;
 }
+
+/* Utility: justify paragraph text */
+.justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
